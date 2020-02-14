@@ -3,35 +3,35 @@ import Keg from './Keg'
 
 let masterKegList = [
   {
-    names: 'Scala',
+    name: 'Scala',
     brand: 'Anonymous Local Brewing Co.',
     price: '4',
     alcoholContent: '5%',
     pintRemaining: '120'
   },
   {
-    names: 'Ruby',
+    name: 'Ruby',
     brand: 'Sparkle Brewz',
     price: '6',
     alcoholContent: '4%',
     pintRemaining: '120'
   },
   {
-    names: 'Java',
+    name: 'Java',
     brand: 'Sunshine Brewing',
     price: '6',
     alcoholContent: '7%',
     pintRemaining: '120'
   },
   {
-    names: 'Django',
+    name: 'Django',
     brand: 'Sparkle Brewz',
     price: '4',
     alcoholContent: '4%',
     pintRemaining: '120'
   },
   {
-    names: 'Fortran',
+    name: 'Fortran',
     brand: 'Anonymous Local Brewing Co.',
     price: '5',
     alcoholContent: '7%',
@@ -44,7 +44,7 @@ function KegList(){
   <div>
     <hr/>
     {masterKegList.map((keg, index) =>
-      <Keg names={keg.names}
+      <Keg name={keg.name}
         brand={keg.brand}
         price={keg.price}
         alcoholContent={keg.alcoholContent}
