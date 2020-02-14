@@ -1,12 +1,18 @@
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button }from 'react-bootstrap';
 import "../Header.css";
+
 function Header(){
   const HeaderGrid = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    borderBottom: '3px',
-    backgroundColor: 'gray'
+    borderBottom: '8px solid white',
+    backgroundColor: '#E5DADA',
+  }
+  const btnStyle = {
+    backgroundColor: '#002642',
+    borderColor: '#002642',
+    color: 'white'
   }
 
 
@@ -25,7 +31,7 @@ function Header(){
             </NavDropdown>
             <Form inline>
               <FormControl type="text" placeholder="Show me a keg..." className="mr-sm-2" />
-              <Button variant="outline-warning">Search</Button>
+              <Button style={btnStyle}>Search</Button>
             </Form>
           </Nav>
         </Navbar.Collapse>
