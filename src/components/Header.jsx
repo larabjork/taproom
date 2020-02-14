@@ -6,8 +6,9 @@ function Header(){
   const HeaderGrid = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    borderBottom: '8px solid white',
-    backgroundColor: '#E5DADA',
+    borderTop: '8px solid #002642',
+    borderBottom: '8px solid #002642',
+    backgroundColor: '#FFF9F9',
   }
   const btnStyle = {
     backgroundColor: '#002642',
