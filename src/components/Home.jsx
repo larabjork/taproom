@@ -7,25 +7,12 @@ import macleod from '../assets/images/macleod_tap.jpg';
 import outside from '../assets/images/outside_seating.jpg';
 import people from '../assets/images/two-people.jpg';
 
-const carouselBody = {
-
-  // textShadow: 1px 1px 2px black, 0 0 0.5em grey, 0 0 0.2em darkgrey;
-  color: "white",
-  paddingTop: "8px"
-}
-
-const carouselImg = {
-  height: '480px',
-  width: 'auto',
-  borderRadius: '12px',
-  border: '1px solid #1D3F29'
-}
 
 
 function Home(){
   return (
     <>
-    <div id='carouselBody'>
+    <div className  ='carouselBody'>
       <Carousel>
         <Carousel.Item>
           <img
@@ -89,7 +76,7 @@ function Home(){
             alt="Group of people sharing food and drink"
             />
           <Carousel.Caption>
-            <h3>FCheck out our food, too!</h3>
+            <h3>Check out our food, too!</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

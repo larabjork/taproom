@@ -9,17 +9,25 @@ import Error404 from './components/Error404';
 import { Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { Row, Col, Container } from 'react-bootstrap';
 
 function App() {
   return (
     <div className="bodyDiv">
 
       <Header/>
-      <div>
-        <Home/>
-      </div>
+      <Container>
+        <Row>
+          <Col md={1}>
+          </Col>
+          <Col md={10}>
+            <Route exact path='/' component={Home} />
+          </Col>
+        </Row>
+        <Col md={1}>
+        </Col>
+      </Container>
       <Switch>
-        <Route exact path='/' component={Home} />
         <Route path='/keglist' component={KegList} />
         <Route path='/keg' component={Keg} />
         <Route path='/newkegform' component={NewKegForm} />

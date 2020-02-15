@@ -1,25 +1,37 @@
+
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, ListGroup, Accordion } from 'react-bootstrap';
+import { Card, CardDeck } from 'react-bootstrap';
+
+const kegStyle = {
+  backgroundColor: '#E59500',
+  border: '2px solid #02040F',
+  fontFamily: 'Open Sans'
+}
 
 function Keg(props){
   return (
     <div>
-      <Accordion >
-        <Card className="kegCard" style={{ width: '18rem' }}>
-          <Accordion.Toggle as={Card.Header} eventKey="0" className="cardHeader">
-            {props.name}
-          </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body>
-              <p><em>Brewery: {props.brand}</em></p>
-              <p><em>Price: ${props.price}</em></p>
-              <p><em>Alcohol by Volume: {props.alcoholContent}%</em></p>
-              <p><em>Pints Remaining: {props.pintRemaining} out of 124</em></p>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+      <Card text="white" style={{ width: '18rem' }}>
+        <Card.Body style={kegStyle}>
+          <div>
+          <Card.Title>{props.name}</Card.Title>
+            <style jsx>{`
+          .card-title {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 56px;
+          }
+      `}
+    </style>
+          </div>
+          <Card.Text>
+            <p>Brewery: {props.brand}</p>
+            <p>Price: ${props.price}</p>
+            <p>Alcohol by Volume: {props.alcoholContent}</p>
+            <p>Pints Remaining: {props.pintRemaining} out of 124</p>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   );
 }

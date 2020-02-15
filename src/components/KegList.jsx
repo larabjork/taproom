@@ -1,6 +1,12 @@
 import React from 'react';
 import Keg from './Keg'
 
+const masterKegStyle = {
+  backgroundColor: '#840032',
+  color: 'white'
+}
+
+
 let masterKegList = [
   {
     name: 'Scala',
@@ -41,7 +47,7 @@ let masterKegList = [
 
 function KegList(){
   return (
-  <div>
+  <div style={masterKegStyle}>
     {masterKegList.map((keg, index) =>
       <Keg name={keg.name}
         brand={keg.brand}
