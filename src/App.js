@@ -15,25 +15,20 @@ function App() {
   return (
     <div className="bodyDiv">
 
+
       <Header/>
-      <Container>
-        <Row>
-          <Col md={1}>
-          </Col>
-          <Col md={10}>
-            <Route exact path='/' component={Home} />
-          </Col>
-        </Row>
-        <Col md={1}>
-        </Col>
-      </Container>
-      <Switch>
-        <Route path='/keglist' component={KegList} />
-        <Route path='/keg' component={Keg} />
-        <Route path='/newkegform' component={NewKegForm} />
-        <Route path='/editkegform' component={EditKegForm} />
-        <Route component={Error404} />
-      </Switch>
+
+            <Switch>
+
+              <Route exact path='/' component={Home} />
+              <Route path='/home' component={Home} />
+              <Route path='/keglist' component={KegList} />
+              <Route path='/keg' component={Keg} />
+              <Route path='/newkegform' component={NewKegForm} />
+              <Route path='/editkegform' component={EditKegForm} />
+              <Route component={Error404} />
+            </Switch>
+
     </div>
   );
 }
