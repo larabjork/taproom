@@ -4,7 +4,8 @@ import { Form, FormControl, Button, Container }from 'react-bootstrap';
 const btnStyleKeg = {
   backgroundColor: '#002642',
   borderColor: '#002642',
-  color: 'white'
+  color: 'white',
+  fontWeight: 'bold'
 }
 
 function NewKegForm(){

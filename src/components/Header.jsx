@@ -6,14 +6,16 @@ function Header(){
   const HeaderGrid = {
     display: 'grid',
     gridTemplateColumns: '1fr 1fr',
-    borderTop: '8px solid #002642',
-    borderBottom: '8px solid #002642',
-    backgroundColor: '#E59500',
+    borderTop: '8px solid #141414',
+    borderBottom: '8px solid #141414',
+    backgroundColor: '#EEC643',
+    align: 'center'
   }
   const btnStyle = {
-    backgroundColor: '#002642',
-    borderColor: '#002642',
-    color: 'white'
+    backgroundColor: '#141414',
+    borderColor: '#141414',
+    color: 'white',
+    fontWeight: 'bold'
   }
 
 
@@ -27,6 +29,7 @@ function Header(){
           <Nav className="mr-auto">
             <Nav.Link href="#keglist">Keg List</Nav.Link>
             <NavDropdown title="Kegmeisters Only" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#login">Login</NavDropdown.Item>
               <NavDropdown.Item href="#newkegform">Add Keg</NavDropdown.Item>
               <NavDropdown.Item href="#editkegform">Edit Keg List</NavDropdown.Item>
             </NavDropdown>

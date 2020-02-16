@@ -1,89 +1,57 @@
+<Card>
+  <Card.Header>
+    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+      Click me!
+    </Accordion.Toggle>
+  </Card.Header>
+  <Accordion.Collapse eventKey="0">
+    <Card.Body>Hello! I'm the body</Card.Body>
+  </Accordion.Collapse>
+</Card>
+
+
+
+
+
 import React from 'react';
-import Carousel  from 'react-bootstrap/Carousel';
-import bottles from '../assets/images/bottles.jpg';
-import macleod from '../assets/images/macleod_tap.jpg';
-import corner from '../assets/images/corner-bar.jpg';
-import stout from '../assets/images/beerExample.jpg';
-import people from '../assets/images/people_table.jpg';
-import copper from '../assets/images/copper-brewing-vessel.jpeg';
-import stein from '../assets/images/stein.jpg';
-import tap from '../assets/images/tap_with_glass.jpg';
+import {Nav, Navbar} from 'react-bootstrap';
 
-
-
-
-
-function Home(){
+function MiniNav() {
+  const linkStyles = {
+    paddingTop: '5px',
+    paddingRight: '15px'
+  };
+  const miniStyles = {
+    height: '72px',
+    fontSize: '13px',
+    paddingRight: '70px'
+  };
   return (
-    <>
-    <div className  ='carouselBody'>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={copper}
-            alt="taps with a snifter glass upsidedown"
-            />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={tap}
-            alt="taps with a snifter glass upsidedown"
-            />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={stein}
-            alt="stein of medium-amber beer"
-            />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={bottles}
-            alt="Four brown glass bottles"
-            />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={macleod}
-            alt="Person pouring a beer from a line of taps"
-            />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={people}
-            alt="Group of people at a table in a bar, woman at center facing camera and offering beer as toast"
-            />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={stout}
-            alt="Full pint glass with dark beer, atop a table of unfinished wood"
-            />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100 carouselImg"
-            src={corner}
-            alt="Photo looking into the corner of an empty bar"
-            />
-        </Carousel.Item>
-
-
-      </Carousel>
+    <div style={miniStyles}>
+      <Navbar expand="lg">
+         <Nav className="ml-auto">
+          <Nav.Link href="#home" style={linkStyles}>Staff Signin</Nav.Link>
+        </Nav>
+      </Navbar>
     </div>
-    </>
   );
 }
 
-export default Home;
+export default MiniNav;
+
+
+<Carousel.Item>
+  <img
+    className="d-block w-100 carouselImg"
+    src={macleod}
+    alt="Person pouring a beer from a line of taps"
+    />
+</Carousel.Item>
+
+<Carousel.Item>
+  <img
+    className="d-block w-100 carouselImg"
+    src={stout}
+    alt="Full pint glass with dark beer, atop a table of unfinished wood"
+    />
+</Carousel.Item>
