@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormControl, Button }from 'react-bootstrap';
+import { Form, FormControl, Button, Container }from 'react-bootstrap';
 
 const btnStyleKeg = {
   backgroundColor: '#002642',
@@ -10,35 +10,50 @@ const btnStyleKeg = {
 function NewKegForm(){
   return (
     <div>
-      <h1>Hey, Kegmeister!</h1>
-      <p>Thanks for keeping our keg list up to date. Make sure to log out from this terminal when you're done!</p>
-      <Form>
-        <Form.Group controlId="formBeerName">
-          <Form.Label>Beer Name</Form.Label>
-          <Form.Control type="text" placeholder="Beer Name" />
-        </Form.Group>
-        <Form.Group controlId="formBrand">
-          <Form.Label>Brewery</Form.Label>
-          <Form.Control type="text" placeholder="Brewery" />
-        </Form.Group>
-        <Form.Group controlId="formPrice">
-          <Form.Label>Price $</Form.Label>
-          <Form.Control type="text" placeholder="5" />
-        </Form.Group>
-        <Form.Group controlId="formAlcoholContent">
-          <Form.Label>ABV %</Form.Label>
-          <Form.Control type="text" placeholder="7" />
-        </Form.Group>
-        <Form.Group controlId="formPintsRemaining">
-          <Form.Label>Pints Remaining</Form.Label>
-          <Form.Control type="text" placeholder="124" />
+      <Container>
+        <div className='heading1'>
+          <style jsx>{`
+              .heading1 {
+                font-family: 'Permanent Marker', cursive;
+              }
+              `}</style>
+            <h1>Hey, Kegmeister!</h1>
+          </div>
+          <p>Thanks for keeping our keg list up to date. Make sure to log out from this terminal when you're done!</p>
+          <Form>
+            <Form.Group controlId="formBeerName">
+              <Form.Label>Beer Name</Form.Label>
+              <Form.Control type="text" placeholder="Beer Name" />
+            </Form.Group>
+            <Form.Group controlId="formBrand">
+              <Form.Label>Brewery</Form.Label>
+              <Form.Control as="select">
+              <option>Anonymous Local Brewing Co.</option>
+              <option>Conjunction Junction Co.</option>
+              <option>Hair-O-the-Dog</option>
+              <option>Sparkle Brewz</option>
+              <option>Sunshine Brewing</option>
+            </Form.Control>
+          </Form.Group>
+          <Form.Group controlId="formPrice">
+            <Form.Label>Price $</Form.Label>
+            <Form.Control type="text" placeholder="5" />
+          </Form.Group>
+          <Form.Group controlId="formAlcoholContent">
+            <Form.Label>ABV %</Form.Label>
+            <Form.Control type="text" placeholder="7" />
+          </Form.Group>
+          <Form.Group controlId="formPintsRemaining">
+            <Form.Label>Pints Remaining</Form.Label>
+            <Form.Control type="text" placeholder="124" />
             <Form.Text className="text-muted">
-              Pints remaining is almost always 124, but please make sure you're not dealing with a pony keg situation!
+              We know you know that this is almost always 124 pints, but please make sure you're not dealing with a pony keg situation!
             </Form.Text>
-        </Form.Group>
-        <Button style={btnStyleKeg} type="submit">Save to Keg List</Button>
-      </Form>
+          </Form.Group>
+          <Button style={btnStyleKeg} type="submit">Save to Keg List</Button>
+        </Form>
 
+      </Container>
     </div>
   );
 }
