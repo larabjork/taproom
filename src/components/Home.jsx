@@ -11,11 +11,23 @@ const carouselBody = {
   height: "100%"
 }
 
+
+
 function Home(){
   return (
     <>
     <div style={carouselBody}>
       <Container>
+        <div className='heading1'>
+          <style jsx>{`
+              .heading1 {
+                font-family: 'Permanent Marker', cursive;
+                font-size: 65px;
+                text-align: center;
+              }
+              `}</style>
+            <p>Welcome to Tip Top Taps</p>
+          </div>
       <Carousel>
         <Carousel.Item>
           <img

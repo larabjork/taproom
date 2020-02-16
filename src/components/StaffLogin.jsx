@@ -11,6 +11,15 @@ function StaffLogin(){
   return (
     <div>
       <Container>
+        <div className='heading1'>
+          <style jsx>{`
+              .heading1 {
+                font-family: 'Permanent Marker', cursive;
+              }
+              `}</style>
+            <h1>Hey, Kegmeister!</h1>
+          </div>
+          <p>Welcome to your shift. Happy pouring!</p>
         <Form>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>

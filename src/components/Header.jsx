@@ -8,8 +8,7 @@ function Header(){
     gridTemplateColumns: '1fr 1fr',
     borderTop: '8px solid #141414',
     borderBottom: '8px solid #141414',
-    backgroundColor: '#EEC643',
-    align: 'center'
+    backgroundColor: '#596FFF'
   }
   const btnStyle = {
     backgroundColor: '#141414',

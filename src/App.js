@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import MiniNav from './components/MiniNav';
+import BottomNav from './components/BottomNav';
 import Home from './components/Home';
 import KegList from './components/KegList';
 import Keg from './components/Keg';
@@ -14,12 +14,10 @@ import { Switch, Route } from 'react-router-dom';
 import { Row, Col, Container } from 'react-bootstrap';
 
 
-const bodyDiv = {
-  paddingTop: "8px"
-}
+
 function App() {
   return (
-    <div style={bodyDiv}>
+    <div className="bodyDiv">
       <Header/>
       <Switch>
         <Route exact path='/' component={Home} />
@@ -31,6 +29,7 @@ function App() {
         <Route path='/editkegform' component={EditKegForm} />
         <Route component={Error404} />
       </Switch>
+      <BottomNav/>
     </div>
   );
 }

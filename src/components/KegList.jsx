@@ -2,10 +2,7 @@ import React from 'react';
 import Keg from './Keg'
 import { Container }from 'react-bootstrap';
 
-const masterKegStyle = {
-  backgroundColor: '#FFF9F9',
-  color: 'white'
-}
+
 
 
 let masterKegList = [
@@ -48,7 +45,18 @@ let masterKegList = [
 
 function KegList(){
   return (
-    <div style={masterKegStyle}>
+    <div>
+      <div className='heading1'>
+        <style jsx>{`
+            .heading1 {
+              font-family: 'Permanent Marker', cursive;
+              font-size: 65px;
+              text-align: center;
+            }
+            `}</style>
+          <p>Our Current Beers</p>
+        </div>
+
       <Container>
         {masterKegList.map((keg, index) =>
           <Keg name={keg.name}

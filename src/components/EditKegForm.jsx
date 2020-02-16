@@ -2,8 +2,8 @@ import React from 'react';
 import { Form, FormControl, Button, Container }from 'react-bootstrap';
 
 const btnStyleKeg = {
-  backgroundColor: '#EEC643',
-  borderColor: '#EEC643',
+  backgroundColor: '#141414',
+  borderColor: '#141414',
   color: 'white',
   fontWeight: 'bold'
 }
