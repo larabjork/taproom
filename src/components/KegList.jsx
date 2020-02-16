@@ -2,7 +2,7 @@ import React from 'react';
 import Keg from './Keg'
 
 const masterKegStyle = {
-  backgroundColor: '#840032',
+  backgroundColor: '#FFF9F9',
   color: 'white'
 }
 
