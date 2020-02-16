@@ -1,45 +1,52 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Button } from 'react-bootstrap';
+import { Accordion, Card, Button, CardGroup } from 'react-bootstrap';
 
 const kegStyle = {
-  backgroundColor: '#E59500',
-  border: '2px solid #02040F',
-  fontFamily: 'Open Sans'
+  backgroundColor: '#141414',
+  border: '4px solid #141414',
+  fontFamily: 'Open Sans',
+  borderRadius: '8px',
+  marginTop: '5px'
 }
 
 const btnStylePintSold= {
-  backgroundColor: '#002642',
-  borderColor: '#002642',
-  color: 'white'
+  backgroundColor: '#EEC643',
+  borderColor: '#EEC643',
+  color: '#141414',
+  fontWeight: 'bold'
 }
 
 
 function Keg(props){
   return (
     <div>
-      <Card text="white" style={{ width: '18rem' }}>
-        <Card.Body style={kegStyle}>
-          <div>
-            <Card.Title>{props.name}</Card.Title>
-            <style jsx>{`
-                .card-title {
-                  font-family: 'Permanent Marker', cursive;
-                  font-size: 56px;
-                }
-                `}
-              </style>
-            </div>
-            <Card.Text>
-              <p>Brewery: {props.brand}</p>
-              <p>Price: ${props.price}</p>
-              <p>Alcohol by Volume: {props.alcoholContent}</p>
-              <p>Pints Remaining: {props.pintRemaining} out of 124</p>
-            </Card.Text>
-            <Button style={btnStylePintSold}>1 Pint Sold!</Button>
-          </Card.Body>
-        </Card>
+      <Accordion defaultActiveKey="0">
+        <Card text="white" style={{ width: '22rem' }} style={kegStyle}>
+            <Accordion.Toggle as={Card.Header} eventKey="0">
+              <Card.Title>{props.name}</Card.Title>
+              <style jsx>{`
+                  .card-title {
+                    font-family: 'Permanent Marker', cursive;
+                    font-size: 56px;
+                  }
+                  `}
+                </style>
+              </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body >
+                <Card.Text>
+                  <p>Brewery: {props.brand}</p>
+                  <p>Price: ${props.price}</p>
+                  <p>Alcohol by Volume: {props.alcoholContent}</p>
+                  <p>Pints Remaining: {props.pintRemaining} out of 124</p>
+                </Card.Text>
+                <Button style={btnStylePintSold}>1 Pint Sold!</Button>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Keg from './Keg'
+import { Container }from 'react-bootstrap';
 
 const masterKegStyle = {
   backgroundColor: '#FFF9F9',
@@ -47,17 +48,19 @@ let masterKegList = [
 
 function KegList(){
   return (
-  <div style={masterKegStyle}>
-    {masterKegList.map((keg, index) =>
-      <Keg name={keg.name}
-        brand={keg.brand}
-        price={keg.price}
-        alcoholContent={keg.alcoholContent}
-        pintRemaining={keg.pintRemaining}
-        key={index}/>
-    )}
-  </div>
-);
+    <div style={masterKegStyle}>
+      <Container>
+        {masterKegList.map((keg, index) =>
+          <Keg name={keg.name}
+            brand={keg.brand}
+            price={keg.price}
+            alcoholContent={keg.alcoholContent}
+            pintRemaining={keg.pintRemaining}
+            key={index}/>
+        )}
+      </Container>
+    </div>
+  );
 }
 
 
