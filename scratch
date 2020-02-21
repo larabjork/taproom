@@ -1,57 +1,32 @@
-<Card>
-  <Card.Header>
-    <Accordion.Toggle as={Button} variant="link" eventKey="0">
-      Click me!
-    </Accordion.Toggle>
-  </Card.Header>
-  <Accordion.Collapse eventKey="0">
-    <Card.Body>Hello! I'm the body</Card.Body>
-  </Accordion.Collapse>
-</Card>
-
-
-
-
-
-import React from 'react';
-import {Nav, Navbar} from 'react-bootstrap';
-
-function MiniNav() {
-  const linkStyles = {
-    paddingTop: '5px',
-    paddingRight: '15px'
-  };
-  const miniStyles = {
-    height: '72px',
-    fontSize: '13px',
-    paddingRight: '70px'
-  };
-  return (
-    <div style={miniStyles}>
-      <Navbar expand="lg">
-         <Nav className="ml-auto">
-          <Nav.Link href="#home" style={linkStyles}>Staff Signin</Nav.Link>
-        </Nav>
-      </Navbar>
-    </div>
-  );
-}
-
-export default MiniNav;
-
-
-<Carousel.Item>
-  <img
-    className="d-block w-100 carouselImg"
-    src={macleod}
-    alt="Person pouring a beer from a line of taps"
-    />
-</Carousel.Item>
-
-<Carousel.Item>
-  <img
-    className="d-block w-100 carouselImg"
-    src={stout}
-    alt="Full pint glass with dark beer, atop a table of unfinished wood"
-    />
-</Carousel.Item>
+<Form>
+  <Form.Group controlId="formBeerName">
+    <Form.Label>Beer Name</Form.Label>
+    <Form.Control type="text" placeholder="Beer Name"  inputRef={(ref) => { this.beerName = ref }}/>
+  </Form.Group>
+  <Form.Group controlId="formBrand">
+    <Form.Label>Brewery</Form.Label>
+    <Form.Control as="select">
+    <option>Anonymous Local Brewing Co.</option>
+    <option>Conjunction Junction Co.</option>
+    <option>Hair-O-the-Dog</option>
+    <option>Sparkle Brewz</option>
+    <option>Sunshine Brewing</option>
+  </Form.Control>
+</Form.Group>
+<Form.Group controlId="formPrice">
+  <Form.Label>Price $</Form.Label>
+  <Form.Control type="text" placeholder="5" />
+</Form.Group>
+<Form.Group controlId="formAlcoholContent">
+  <Form.Label>ABV %</Form.Label>
+  <Form.Control type="text" placeholder="7" />
+</Form.Group>
+<Form.Group controlId="formPintsRemaining">
+  <Form.Label>Pints Remaining</Form.Label>
+  <Form.Control type="text" placeholder="124" />
+  <Form.Text className="text-muted">
+    We know you know that this is almost always 124 pints, but please make sure you're not dealing with a pony keg situation!
+  </Form.Text>
+</Form.Group>
+<Button style={btnStyleKeg} type="submit">Save to Keg List</Button>
+</Form>

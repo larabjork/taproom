@@ -23,7 +23,7 @@ function Keg(props){
   return (
     <div>
       <Accordion defaultActiveKey="0">
-        <Card text="white" style={{ width: '22rem' }} style={kegStyle}>
+        <Card text="white"  style={kegStyle}>
             <Accordion.Toggle as={Card.Header} eventKey="0">
               <Card.Title>{props.name}</Card.Title>
               <style jsx>{`
@@ -40,7 +40,7 @@ function Keg(props){
                   <p>Brewery: {props.brand}</p>
                   <p>Price: ${props.price}</p>
                   <p>Alcohol by Volume: {props.alcoholContent}</p>
-                  <p>Pints Remaining: {props.pintRemaining} out of 124</p>
+                  <p>Pints Remaining: {props.pintsRemaining} out of 124</p>
                 </Card.Text>
                 <Button style={btnStylePintSold}>1 Pint Sold!</Button>
               </Card.Body>
@@ -56,7 +56,7 @@ function Keg(props){
     brand: PropTypes.string,
     price: PropTypes.number,
     alcoholContent: PropTypes.number,
-    pintRemaining: PropTypes.number
+    pintsRemaining: PropTypes.number
   };
 
 

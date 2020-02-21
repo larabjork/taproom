@@ -1,6 +1,8 @@
 import React from 'react';
 import EditKegForm from './EditKegForm';
+import NewKegForm from './NewKegForm';
 import StaffLogin from './StaffLogin';
+import PropTypes from "prop-types";
 
 
 class Admin extends React.Component {
@@ -25,8 +27,8 @@ class Admin extends React.Component {
 
   render(){
     let currentlyVisibleContent = null;
-    if (this.state.editKegFormVisible){
-      currentlyVisibleContent = <EditKegForm />;
+    if (this.state.newKegFormVisible){
+      currentlyVisibleContent = <NewKegForm onNewKEgCreation={this.props.onNewKegCreation}/>;
     } else {
       currentlyVisibleContent = <StaffLogin onLoginConfirmation={this.handleLoginConfirmation}/>;
     }
@@ -37,5 +39,9 @@ class Admin extends React.Component {
     );
   }
 }
+Admin.propTypes = {
+  onNewKegCreation: PropTypes.func
+};
+
 
 export default Admin;
