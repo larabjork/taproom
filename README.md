@@ -1,14 +1,16 @@
-# Tip Top Taproom (Week 1)
-## Created by Lara Bjork on February 14, 2020
+# Tip Top Taproom
+## Created by Lara Bjork on February 14 and 21, 2020
 ### Project Description
 
-This project was completed as an independent assignment for the React class at Epicodus, after a week focused on React Fundamentals. The task description was as follows:
+This project was completed as a two-week independent assignment for the React class at Epicodus, after curriculum focused on React Fundamentals and Managing State. The task description was as follows:
 
-_This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. Today's focus includes creating a component tree and documenting your work. This prompt is flexible and the functionality you include is ultimately up to you._
+_Week 1: This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. Today's focus includes creating a component tree and documenting your work. This prompt is flexible and the functionality you include is ultimately up to you._
+
+_Week 2: This week you'll continue working toward completing this React project, including adding React state to manage, display, and collect dynamic data._
 
 ### Specifications
 The assignment provided the following specifications:
-_* Before coding, spend time planning and drawing out your React app's component structure. Include an image of this component tree in your README._
+_* Before coding, spend time planning and drawing out your React app's component structure. Include an image of this component tree in your README. Make sure it reflects the need to manage state._
 _* As a patron, I want to see a list/menu of all available kegs. For each keg, I need to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store)._
 _* As an employee, I want to fill out a form when I tap a new keg to add it to the list. (Don't worry about authenticating employee user accounts yet.)_
 _* As an employee, I want the option to edit a keg's properties after entering them just in case I make a mistake._

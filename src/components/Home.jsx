@@ -11,6 +11,10 @@ const carouselBody = {
   height: "100%"
 }
 
+const carouselImg = {
+  border: "3px solid black"
+}
+
 
 
 function Home(){
