@@ -1,7 +1,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { Accordion, Card, Button, CardGroup } from 'react-bootstrap';
+import { Accordion, Card, Button } from 'react-bootstrap';
 
 const kegStyle = {
   backgroundColor: '#141414',

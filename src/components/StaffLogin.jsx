@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form, FormControl, Button, Container }from 'react-bootstrap';
+import { Form, Button, Container }from 'react-bootstrap';
+import PropTypes from 'prop-types';
 
 const btnStyleLogin = {
   backgroundColor: '#002642',
@@ -7,7 +8,7 @@ const btnStyleLogin = {
   color: 'white'
 }
 
-function StaffLogin(){
+function StaffLogin(props){
   return (
     <div>
       <Container>
@@ -37,5 +38,9 @@ function StaffLogin(){
     </div>
   );
 }
+
+StaffLogin.propTypes = {
+  onLoginConfirmation: PropTypes.func
+};
 
 export default StaffLogin;

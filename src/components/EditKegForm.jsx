@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormControl, Button, Container }from 'react-bootstrap';
+import { Form, Button, Container }from 'react-bootstrap';
 
 const btnStyleKeg = {
   backgroundColor: '#141414',
@@ -7,11 +7,6 @@ const btnStyleKeg = {
   color: 'white',
   fontWeight: 'bold'
 }
-
-const formStyle = {
-  backgroundColor: '#0D21A1'
-}
-
 
 function EditKegForm(){
   return (

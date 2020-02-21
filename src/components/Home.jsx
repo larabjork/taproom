@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel, Container, Row, Col}  from 'react-bootstrap';
+import {Carousel, Container}  from 'react-bootstrap';
 import bottles from '../assets/images/bottles.jpg';
 import corner from '../assets/images/corner-bar.jpg';
 import stein from '../assets/images/stein.jpg';
@@ -10,12 +10,6 @@ const carouselBody = {
   paddingTop: "8px",
   height: "100%"
 }
-
-const carouselImg = {
-  border: "3px solid black"
-}
-
-
 
 function Home(){
   return (
