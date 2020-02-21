@@ -4,7 +4,7 @@
 
 This project was completed as a two-week independent assignment for the React class at Epicodus, after curriculum focused on React Fundamentals and Managing State. The task description was as follows:
 
-_Week 1: This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. Today's focus includes creating a component tree and documenting your work. This prompt is flexible and the functionality you include is ultimately up to you._
+_Week 1: This will be a two-week project. Spend today building a tap room in React where a bar or kombucha store can track their kegs. Today's focus includes creating a component tree and documenting your work._
 
 _Week 2: This week you'll continue working toward completing this React project, including adding React state to manage, display, and collect dynamic data._
 
@@ -23,7 +23,7 @@ _* As a patron, I want to use the alcohol content property to display stronger b
 ### Component Structure
 This component structure diagram will be revised if any further changes are made.
 
-![TaproomComponentsRoutes](/TaproomComponentsRoutes.jpg)
+![TaproomComponentsRoutesState](/TaproomComponentsRoutesState.jpg)
 
 ### Technologies Used
 React, Yarn
