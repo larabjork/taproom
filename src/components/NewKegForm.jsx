@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Container }from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-
 const btnStyleKeg = {
   backgroundColor: '#141414',
   borderColor: '#141414',
