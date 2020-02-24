@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import KegList from './KegList';
-import KegLevel from './KegLevel';
+import KegDetail from './KegDetail';
 
 
 function Admin(props){
   let optionalSelectedKegContent = null;
-  if (props.selectedKegLevel !=null) {
-    optionalSelectedKegContent = <KegLevel selectedKegLevel={props.kegList[props.selectedKegLevel]} />
+  if (props.selectedKeg !=null) {
+    optionalSelectedKegContent = <KegDetail selectedKeg={props.kegList[props.selectedKeg]}/>
   }
   return (
     <div>
-      <h2>Admin</h2>
       {optionalSelectedKegContent}
-      <KegLevel />
+      <KegDetail />
       <KegList
         kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}
@@ -26,7 +25,7 @@ Admin.propTypes = {
   kegList: PropTypes.array,
   currentRouterPath: PropTypes.string.isRequired,
   onKegSelection: PropTypes.func.isRequired,
-  selectedKegLevel: PropTypes.string
+  selectedKeg: PropTypes.string
 };
 
 

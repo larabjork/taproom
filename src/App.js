@@ -21,7 +21,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       masterKegList: {},
-      selectedKegLevel: null
+      selectedKeg: null
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
     this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
@@ -32,12 +32,11 @@ class App extends React.Component {
     let newMasterKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
     });
-
     this.setState({masterKegList: newMasterKegList});
   }
 
   handleChangingSelectedKeg(kegId){
-    this.setState({selectedKegLevel: kegId});
+    this.setState({selectedKeg: kegId});
   }
 
   render(){
@@ -49,7 +48,8 @@ class App extends React.Component {
           <Route path='/home' component={Home} />
           <Route path='/keglist' render={()=><KegList kegList={this.state.masterKegList} />} />
           <Route path='/keg' component={Keg} />
-          <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKegLevel={this.state.selectedKegLevel}/>} />
+          <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg}/>} />
+
           <Route path='/login' component={StaffLogin} />
           <Route path='/newkegform' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route path='/editkegform' component={EditKegForm} />
