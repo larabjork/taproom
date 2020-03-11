@@ -35,6 +35,7 @@ Project was written using Google Chrome. No other browsers were tested.
 
 ### Where to Find This Project
 https://github.com/larabjork/taproom.git
+https://taproom-production-app.herokuapp.com/#/
 
 ### License
 This software is licensed under the MIT license.
