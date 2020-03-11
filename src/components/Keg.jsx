@@ -14,7 +14,7 @@ const kegStyle = {
 function Keg(props){
   const kegInformation =
     <div>
-      <Accordion defaultActiveKey="0">
+      <Accordion>
         <Card text="white"  style={kegStyle}>
           <Accordion.Toggle as={Card.Header} eventKey="0">
             <Card.Title>{props.name}</Card.Title>
@@ -26,7 +26,7 @@ function Keg(props){
                 `}
               </style>
             </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
+          <Accordion.Collapse >
             <Card.Body >
               <Card.Text>
                 <p>Brewery: {props.brand}</p>

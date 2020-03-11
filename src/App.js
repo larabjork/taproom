@@ -39,6 +39,8 @@ class App extends React.Component {
     this.setState({selectedKeg: kegId});
   }
 
+
+
   render(){
     return (
       <div className="bodyDiv">
@@ -49,7 +51,6 @@ class App extends React.Component {
           <Route path='/keglist' render={()=><KegList kegList={this.state.masterKegList} />} />
           <Route path='/keg' component={Keg} />
           <Route path='/admin' render={(props)=><Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname} onKegSelection={this.handleChangingSelectedKeg} selectedKeg={this.state.selectedKeg}/>} />
-
           <Route path='/login' component={StaffLogin} />
           <Route path='/newkegform' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route path='/editkegform' component={EditKegForm} />

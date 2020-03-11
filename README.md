@@ -38,6 +38,7 @@ https://github.com/larabjork/taproom.git
 
 ### License
 This software is licensed under the MIT license.
+Favicon beer icon: <a href="https://icons8.com/icon/3696/beer">Beer icon by Icons8</a>
 
 Copyright (c) 2020 Lara Bjork
 

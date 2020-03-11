@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import PropTypes from 'prop-types';
 import { Accordion, Card, Button } from 'react-bootstrap';
 
 const kegStyle = {
-  backgroundColor: '#141414',
-  border: '4px solid #141414',
+  backgroundColor: 'white',
+  border: '4px solid white',
   fontFamily: 'Open Sans',
   borderRadius: '8px',
-  marginTop: '5px'
+  marginTop: '5px',
 }
 
 const btnStylePintSold= {
@@ -19,37 +20,26 @@ const btnStylePintSold= {
 
 
 function KegDetail(props){
-
+  const [counter, setCounter] = useState(124)
   return (
-
     <div>
-      <Accordion defaultActiveKey="0">
-        <Card text="white"  style={kegStyle}>
-          <Accordion.Toggle as={Card.Header} eventKey="0">
-            <Card.Title>{props.selectedKeg.name}</Card.Title>
+      <Card text="black"  style={kegStyle}>
+        <Card.Body>
+          <Card.Title>{props.selectedKeg.name}</Card.Title>
             <style jsx>{`
-                .card-title {
-                  font-family: 'Permanent Marker', cursive;
-                  font-size: 56px;
-                }
-                `}
-              </style>
-            </Accordion.Toggle>
-          <Accordion.Collapse eventKey="0">
-            <Card.Body >
-              <Card.Text>
-                <p>Brewery: {props.selectedKeg.brand}</p>
-                <p>Price: ${props.selectedKeg.price}</p>
-                <p>Alcohol by Volume: {props.selectedKeg.alcoholContent}</p>
-                <p>Pints Remaining: {props.selectedKeg.pintsRemaining} out of 124</p>
-              </Card.Text>
-              <Button style={btnStylePintSold}>1 Pint Sold!</Button>
-            </Card.Body>
-          </Accordion.Collapse>
-        </Card>
-      </Accordion>
+              .card-title {
+                font-family: 'Permanent Marker', cursive;
+                font-size: 56px;
+              }
+              `}
+            </style>
+          <Card.Text>
+            <p>Pints Remaining: {counter} out of 124</p>
+          </Card.Text>
+            <Button style={btnStylePintSold} onClick={() => setCounter(counter-1)}>1 Pint Sold!</Button>
+        </Card.Body>
+      </Card>
     </div>
-
   );
 }
 

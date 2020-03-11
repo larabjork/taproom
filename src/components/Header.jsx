@@ -28,7 +28,6 @@ function Header(){
           <Nav className="mr-auto">
             <Nav.Link href="#keglist">Keg List</Nav.Link>
             <NavDropdown title="Kegmeisters Only" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#login">Login</NavDropdown.Item>
               <NavDropdown.Item href="#newkegform">Add Keg</NavDropdown.Item>
               <NavDropdown.Item href="#editkegform">Edit Keg List</NavDropdown.Item>
             </NavDropdown>

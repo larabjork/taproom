@@ -12,7 +12,6 @@ function Admin(props){
   return (
     <div>
       {optionalSelectedKegContent}
-      <KegDetail />
       <KegList
         kegList={props.kegList}
         currentRouterPath={props.currentRouterPath}
